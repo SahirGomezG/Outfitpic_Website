@@ -38,11 +38,24 @@ export default function Home() {
           </div>
         </header>
 
+        <section class="about" id="download">
+          <div class="about-section"> 
+            <div class="row">
+              <div class="col-lg-8 mx-auto"> 
+                <p class="lead">How it works </p>      
+                <p class="mb-0">OutfitPic is an interactive smartphone app where users upload their outfits and ask their friends, as well as other users in the app,</p> 
+                <p class="mb-0">to share their opinions by voting for the coolest outfit in polls created by them. The voting system is as simple as one click on your favorite option.</p> 
+                <p class="mb-0">The goal is to receive enough feedback to determine whether users should wear their chosen outfits..</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="download bg-primary text-center" id="download">
           <div class="container">
             <div class="row">
               <div class="col-md-8 mx-auto">
-                <h2 >Discover how fun is to choose your outfit!</h2>
+                <h2>Discover the fuzz!</h2>
                 <p>Our app is available on any iOS device! Download now to get started!</p>
                 <div class="badges">
                   <a class="badge-link" href="#"><img src={appStoreBadge} alt="App store logo"/></a>
@@ -58,12 +71,12 @@ export default function Home() {
                   <source src={clip} type="video/mp4"/>
               </video>
               <div class="container h-100">
-                    <div class="d-flex h-100 text-center align-items-center">
-                      <div class="w-100 text-white">
-                        <h2>Join today!</h2>
-                        <p class="lead mb-0">Help others choose their best outfit.</p>
-                      </div>
-                    </div>
+                <div class="d-flex h-100 text-center align-items-center">
+                  <div class="w-100 text-white">
+                      <h2>Join today!</h2>
+                      <p class="lead mb-0">Help others choose their best outfit.</p>
+                  </div>
+                </div>
               </div>
           </section>
 
