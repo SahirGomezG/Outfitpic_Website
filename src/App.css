@@ -253,7 +253,7 @@ section.about .about-section {
   background-color: #343a41;
   width: 100%;
   align-items: center;
-  /*justify-content: center;*/
+  justify-content: center;
   color: white;
 }
 

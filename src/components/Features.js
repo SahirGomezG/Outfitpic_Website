@@ -5,7 +5,7 @@ import { FaSlideshare, FaChartPie, FaGifts, FaGlobeAmericas, FaRegClock, FaCamer
 
 export default function Features() {
     return (
-        <section class="features" id="features">
+          <section class="features" id="features">
             <div class="container">
               <div class="section-heading text-center">
                     <h2>Unlimited Creativity, Unlimited Fun</h2>
@@ -82,6 +82,6 @@ export default function Features() {
                 </div>
               </div>
             </div>
-            </section>
+        </section>
     )
 }
