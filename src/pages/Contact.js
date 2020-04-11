@@ -21,16 +21,15 @@ export default class Contact extends Component {
                      
                             <form name="contact" method="POST" data-netlify="true">
                               <div class="form-group">
-                                  <label>Your Email: <input type="email" name="email" /></label>
-                                  <label for="exampleInputEmail1">Email address</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                                  <label>Your Email: </label>
+                                  <input type="email" class="form-control" name="email" aria-describedby="emailHelp"/>
+                                  
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
 
                               <div class="form-group">
-                                  <label>Your Name: <input type="text" name="name" /></label>  
-                                  <label for="name">Name</label>
-                                  <input type="text" class="form-control" id="name"/>
+                                  <label>Your Name: </label>  
+                                  <input type="text" class="form-control" name="name" />
                               </div>
 
                               <div class="form-group">
