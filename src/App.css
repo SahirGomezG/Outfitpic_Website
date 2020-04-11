@@ -477,22 +477,21 @@ section.contact ul.list-social li a {
 
 .login,
 .image {
-  min-height: 100vh;
+  min-height: 85vh;
 }
 
 .bg-image {
   background-color: #343a41;
-  background-size: cover;
+  background-size: 80%;
   background-position: center;
   text-align: center;
-}
-
-.logoContainer {
-  text-align: center;
+  background-repeat: no-repeat;
+  /*overflow: hidden;*/
 }
 
 .contact-logo {
-  height: 80vmin;
+  height: 78vmin;
+  /*min-height: 500px;*/
   pointer-events: none;
 }
 

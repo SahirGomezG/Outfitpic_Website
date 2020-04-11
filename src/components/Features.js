@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import demo2 from '../images/IMG_3523.PNG';
+import demo from '../images/demo6.png';
 import { FaSlideshare, FaChartPie, FaGifts, FaGlobeAmericas, FaRegClock, FaCameraRetro } from 'react-icons/fa';
 
 export default function Features() {
@@ -17,13 +18,10 @@ export default function Features() {
                   <div class="device-container">
                     <div class="device-mockup iphone6_plus portrait white">
                       <div class="device">
-                        <div class="screen">
-                          
-                          <img src={demo2} class="img-fluid" alt=""/>
+                        <div class="screen">              
+                          <img src={demo} class="img-fluid" alt=""/>
                         </div>
-                        <div class="button">
-                          
-                        </div>
+                      
                       </div>
                     </div>
                   </div>
