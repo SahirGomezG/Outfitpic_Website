@@ -34,7 +34,7 @@ export default function Home() {
                 <p class="lead">How it works </p>      
                 <p class="mb-0">OutfitPic is an interactive smartphone app where users upload their outfits and ask their friends, as well as other users in the app,</p> 
                 <p class="mb-0">to share their opinions by voting for the coolest outfit in polls created by them. The voting system is as simple as one click on your favorite option.</p> 
-                <p class="mb-0">The goal is to receive enough feedback to determine whether users should wear their chosen outfits..</p>
+                <p class="mb-0">The goal is to receive enough feedback to determine whether users should wear their chosen outfits.</p>
               </div>    
           </div>
         </section>
