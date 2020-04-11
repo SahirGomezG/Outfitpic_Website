@@ -19,34 +19,65 @@ export default class Contact extends Component {
                       <div class="col-md-9 col-lg-8 mx-auto">
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
-                            <form>
+                            <form name="contact" method="POST" data-netlify="true">
                               <div class="form-group">
+                                  <label>Your Email: <input type="email" name="email" /></label>
                                   <label for="exampleInputEmail1">Email address</label>
                                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
 
                               <div class="form-group">
+                                  <label>Your Name: <input type="text" name="name" /></label>  
                                   <label for="name">Name</label>
                                   <input type="text" class="form-control" id="name"/>
                               </div>
 
                               <div class="form-group">
-                                  <label for="textArea">...</label>
-                                  <textarea class="form-control" id="textArea" rows="3"></textarea>
+                                <label>Active User?: <select name="user[]" multiple>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select></label>
+                              </div>  
+
+                              <div class="form-group">
+                                  <label>Message: </label>
+                                  <textarea class="form-control" name="message" rows="3"></textarea>
+
                               </div>
-                              
                               <button type="submit" class="btn btn-dark">Submit</button>
+                      
                             </form>
 
-                            </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>  
+              </div>
+            </div>
+          </div>  
                  
         )
     }
 }
+
+/*<form name="contact" method="POST" data-netlify="true">
+                                <p>
+                                  <label>Your Name: <input type="text" name="name" /></label>   
+                                </p>
+                                <p>
+                                  <label>Your Email: <input type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                  <label>Active User?: <select name="user[]" multiple>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                  </select></label>
+                                </p>
+                                <p>
+                                  <label>Message: <textarea name="message"></textarea></label>
+                                </p>
+                                <p>
+                                  <button type="submit">Send</button>
+                                </p>
+                              </form>*/
