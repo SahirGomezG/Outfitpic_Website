@@ -15,16 +15,14 @@ export default class Contact extends Component {
     this.state = { name: "", email: "", message: "", status: "" };
   }
 
-
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       //headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
-    })
-      .then(() => {
+    }).then(() => {
         this.setState({status: `Thanks ${this.state.name}, We'll be in touch soon!`});
-        this.setState({name:"",emai: "",message:""});
+        this.setState({name:"", email:"", message:""});
         //alert("Success!")
       })
       .catch(error => alert(error));
@@ -46,17 +44,14 @@ export default class Contact extends Component {
     }
   }
 
-
     render() {
       const sent = this.state.status != "" ? true : false;
       const { name, email, message, status } = this.state;
         return (
             <div class="container-fluid">
             <div class="row">
-              <div class=" d-flex col-md-4 col-lg-6 bg-image">
-                  
+              <div class=" d-flex col-md-4 col-lg-6 bg-image">         
                   <img class="contact-logo" src={background} alt="OutfitPic Logo"/>
-            
               </div>
               <div class="col-md-8 col-lg-6">
                 <div class="login d-flex align-items-center py-5">
@@ -88,7 +83,7 @@ export default class Contact extends Component {
 
                             {sent 
                             ? <div class="alert alert-success" role="alert">
-                                <h3>{status}</h3>
+                                <h4>{status}</h4>
                               </div> 
                             : null}
                       </div>
