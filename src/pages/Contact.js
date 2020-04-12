@@ -22,7 +22,7 @@ export default class Contact extends Component {
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
@@ -35,7 +35,17 @@ export default class Contact extends Component {
   };
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    //this.setState({ [e.target.name]: e.target.value });
+    const {name, value} = e.target
+    if (name === 'name' ){
+      this.setState({name: value})
+    }
+    if (name === 'email' ){
+      this.setState({email: value})
+    }
+    if (name === 'message' ){
+      this.setState({message: value})
+    }
   }
 
 
