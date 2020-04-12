@@ -151,7 +151,7 @@ header.masthead .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 106vh;
+  height: 107vh;
   width: 100%;
   background-color: black;
   opacity: 0.3;
@@ -203,7 +203,7 @@ header.masthead .device-container .screen img {
   header.masthead {
     background: url('images/demo3.png') #343a41 no-repeat center center scroll;
     background-size: 120%;
-    background-position: -30% 105%;
+    background-position: 50% 100%;
   }
   header.masthead video {
     display: none;
