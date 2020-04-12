@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 import background from '../images/demo5.png';
 
+const encode = (data) => {
+  /*const formData = new FormData();
+  Object.keys(data).forEach((k)=>{
+    formData.append(k,data[k])
+  });
+  return formData*/
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+};
+
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "", email: "", message: "", status:"" };
   }
 
-  encode = (data) => {
-    /*const formData = new FormData();
-    Object.keys(data).forEach((k)=>{
-      formData.append(k,data[k])
-    });
-    return formData*/
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  };
 
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       //headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
-        this.setState({status: 'Form Submission Successful!!'})
+        this.setState({status: 'Form Submission Successful!!'});
         alert("Success!")
       })
       .catch(error => alert(error));
@@ -33,7 +34,9 @@ export default class Contact extends Component {
     e.preventDefault();
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
 
     render() {
