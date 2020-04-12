@@ -144,7 +144,7 @@ header.masthead {
   background-repeat: no-repeat;
   color: white;
   background-color: #343a41;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 header.masthead .overlay {
@@ -196,6 +196,17 @@ header.masthead .device-container .screen img {
   }
   header.masthead .device-container {
     max-width: 325px;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header.masthead {
+    background: url('images/demo3.png') #343a41 no-repeat center center scroll;
+    background-size: 120%;
+    background-position: -30% 105%;
+  }
+  header.masthead video {
+    display: none;
   }
 }
 
@@ -474,9 +485,8 @@ section.contact ul.list-social li a {
 }
 
 /* Contact form */
-
-.login,
-.image {
+/*.image,*/
+.login{
   min-height: 85vh;
 }
 
