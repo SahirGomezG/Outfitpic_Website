@@ -22,7 +22,7 @@ export default class Contact extends Component {
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
@@ -66,8 +66,8 @@ export default class Contact extends Component {
                       <div class="col-md-9 col-lg-8 mx-auto">
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
-                            <form onSubmit={this.handleSubmit} action="/thank-you/">
-                
+                            <form onSubmit={this.handleSubmit} >
+                            <input type="hidden" name="form-name" value="contact" />
                               <div class="form-group">
                                   <label>Your Email: </label>
                                   <input type="email" name="email" value={email} onChange={this.handleChange} class="form-control"/>
