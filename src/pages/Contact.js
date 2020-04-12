@@ -18,12 +18,12 @@ export default class Contact extends Component {
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
         this.setState({status: 'Form Submission Successful!!'})
-        alert("Success!")
+        //alert("Success!")
       })
       .catch(error => alert(error));
 
@@ -53,17 +53,20 @@ export default class Contact extends Component {
                             <form onSubmit={this.handleSubmit} action="/thank-you/">
                 
                               <div class="form-group">
-                                  <label>Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} /></label>
+                                  <label>Your Email: </label>
+                                  <input type="email" name="email" value={email} onChange={this.handleChange} class="form-control"/>
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
 
                               <div class="form-group">
-                                  <label>Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} /></label>
+                                  <label>Your Name: </label>
+                                  <input type="text" name="name" value={name} onChange={this.handleChange} class="form-control"/>
                                  
                               </div> 
 
                               <div class="form-group">
-                                  <label>Message: <textarea name="message" value={message} onChange={this.handleChange} /></label>
+                                  <label>Message: </label>
+                                  <textarea name="message" value={message} onChange={this.handleChange} class="form-control"/>
 
                               </div>
                               <button type="submit" class="btn btn-dark">Submit</button>
