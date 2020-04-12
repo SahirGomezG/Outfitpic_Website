@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import background from '../images/demo5.png';
 
 export default class Contact extends Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
     this.state = { name: "", email: "", message: "" };
   }
@@ -19,7 +19,7 @@ export default class Contact extends Component {
     e.preventDefault();
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });*/
 
 
     render() {
@@ -39,19 +39,20 @@ export default class Contact extends Component {
                       <div class="col-md-9 col-lg-8 mx-auto">
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
-                            <form name="contact" netlify netlify-honeypot="bot-field" hidden onSubmit={this.handleSubmit}>
+                            <form name="contact" method="post">
+                              <input type="hidden" name="form-name" value="contact" />
                               <div class="form-group">
-                                  <label>Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} /> </label> 
+                                  <label>Your Email: <input type="email" name="email"/></label>
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
 
                               <div class="form-group">
-                                  <label>Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} /> </label>  
+                                  <label>Your Name: <input type="text" name="name"/></label>
                                  
                               </div> 
 
                               <div class="form-group">
-                                  <label>Message: <textarea name="message" value={message} onChange={this.handleChange} /></label> 
+                                  <label>Message: <textarea name="message"></textarea></label>
 
                               </div>
                               <button type="submit" class="btn btn-dark">Submit</button>
