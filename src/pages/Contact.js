@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../images/logo1.png';
 import background from '../images/demo5.png';
 
 export default class Contact extends Component {
@@ -40,7 +39,7 @@ export default class Contact extends Component {
                       <div class="col-md-9 col-lg-8 mx-auto">
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
-                            <form onSubmit={this.handleSubmit}>
+                            <form name="contact" netlify netlify-honeypot="bot-field" hidden onSubmit={this.handleSubmit}>
                               <div class="form-group">
                                   <label>Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} /> </label> 
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
