@@ -23,7 +23,8 @@ export default class Contact extends Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
-        this.setState({status: `Thanks ${this.state.name},  Form Submission Successful!!, we'll be in touch `});
+        this.setState({status: `Thanks ${this.state.name}, We'll be in touch soon!`});
+        this.setState({name:"",emai: "",message:""});
         //alert("Success!")
       })
       .catch(error => alert(error));
@@ -47,6 +48,7 @@ export default class Contact extends Component {
 
 
     render() {
+      const sent = this.state.status != "" ? true : false;
       const { name, email, message, status } = this.state;
         return (
             <div class="container-fluid">
@@ -64,7 +66,7 @@ export default class Contact extends Component {
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
                             <form onSubmit={this.handleSubmit} >
-                            <input type="hidden" name="form-name" value="contact" />
+                              <input type="hidden" name="form-name" value="contact" />
                               <div class="form-group">
                                   <label>Your Email: </label>
                                   <input type="email" name="email" value={email} onChange={this.handleChange} class="form-control"/>
@@ -73,22 +75,22 @@ export default class Contact extends Component {
 
                               <div class="form-group">
                                   <label>Your Name: </label>
-                                  <input type="text" name="name" value={name} onChange={this.handleChange} class="form-control"/>
-                                 
+                                  <input type="text" name="name" value={name} onChange={this.handleChange} class="form-control"/>       
                               </div> 
 
                               <div class="form-group">
                                   <label>Message: </label>
                                   <textarea name="message" value={message} onChange={this.handleChange} class="form-control"/>
-
                               </div>
                               <button type="submit" class="btn btn-dark">Submit</button>
                       
                             </form>
-                            <div class="alert alert-success" role="alert">
-                              <h3>{status}</h3>
-                            </div>
 
+                            {sent 
+                            ? <div class="alert alert-success" role="alert">
+                                <h3>{status}</h3>
+                              </div> 
+                            : null}
                       </div>
                     </div>
                   </div>
