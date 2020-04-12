@@ -1,4 +1,4 @@
-import React, { Component, useState, useCallback } from 'react';
+import React, { Component } from 'react';
 import background from '../images/demo5.png';
 
 export default class Contact extends Component {
@@ -8,22 +8,25 @@ export default class Contact extends Component {
   }
 
   encode = (data) => {
-    const formData = new FormData();
+    /*const formData = new FormData();
     Object.keys(data).forEach((k)=>{
       formData.append(k,data[k])
     });
-    return formData
+    return formData*/
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
   };
 
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
         this.setState({status: 'Form Submission Successful!!'})
-        //alert("Success!")
+        alert("Success!")
       })
       .catch(error => alert(error));
 
