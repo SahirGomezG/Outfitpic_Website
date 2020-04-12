@@ -7,15 +7,12 @@ const encode = (data) => {
     formData.append(k,data[k])
   });
   return formData
-  /*return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");*/
 };
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = { name: "", email: "", message: "", status: "" };
   }
 
 
@@ -26,8 +23,8 @@ export default class Contact extends Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
-        //this.setState({status: 'Form Submission Successful!!'});
-        alert("Success!")
+        this.setState({status: `Thanks ${this.state.name},  Form Submission Successful!!, we'll be in touch `});
+        //alert("Success!")
       })
       .catch(error => alert(error));
 
@@ -50,7 +47,7 @@ export default class Contact extends Component {
 
 
     render() {
-      const { name, email, message } = this.state;
+      const { name, email, message, status } = this.state;
         return (
             <div class="container-fluid">
             <div class="row">
@@ -88,7 +85,9 @@ export default class Contact extends Component {
                               <button type="submit" class="btn btn-dark">Submit</button>
                       
                             </form>
-                           
+                            <div class="alert alert-success" role="alert">
+                              <h3>{status}</h3>
+                            </div>
 
                       </div>
                     </div>
