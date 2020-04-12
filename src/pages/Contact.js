@@ -3,7 +3,28 @@ import logo from '../images/logo1.png';
 import background from '../images/demo5.png';
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", email: "", message: "" };
+  }
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+
     render() {
+      const { name, email, message } = this.state;
         return (
             <div class="container-fluid">
             <div class="row">
@@ -19,29 +40,19 @@ export default class Contact extends Component {
                       <div class="col-md-9 col-lg-8 mx-auto">
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
-                            <form name="contact" method="POST" data-netlify="true">
+                            <form onSubmit={this.handleSubmit}>
                               <div class="form-group">
-                                  <label>Your Email: </label>
-                                  <input type="email" class="form-control" name="email" aria-describedby="emailHelp"/>
-                                  
+                                  <label>Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} /> </label> 
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
 
                               <div class="form-group">
-                                  <label>Your Name: </label>  
-                                  <input type="text" class="form-control" name="name" />
-                              </div>
+                                  <label>Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} /> </label>  
+                                 
+                              </div> 
 
                               <div class="form-group">
-                                <label>Active User?: <select name="user[]" multiple>
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
-                                </select></label>
-                              </div>  
-
-                              <div class="form-group">
-                                  <label>Message: </label>
-                                  <textarea class="form-control" name="message" rows="3"></textarea>
+                                  <label>Message: <textarea name="message" value={message} onChange={this.handleChange} /></label> 
 
                               </div>
                               <button type="submit" class="btn btn-dark">Submit</button>
@@ -80,3 +91,33 @@ export default class Contact extends Component {
                                   <button type="submit">Send</button>
                                 </p>
                               </form>*/
+
+                              /* <div class="form-group">
+                                <label>Active User?: <select name="user[]" multiple>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select></label>
+                              </div> */
+
+
+                              /*<form name="contact" method="POST" data-netlify="true">
+                              <div class="form-group">
+                                  <label>Your Email: </label>
+                                  <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"/>
+                                  
+                                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                              </div>
+
+                              <div class="form-group">
+                                  <label>Your Name: </label>  
+                                  <input type="text" class="form-control" name="name" />
+                              </div> 
+
+                              <div class="form-group">
+                                  <label>Message: </label>
+                                  <textarea class="form-control" name="message" rows="3"></textarea>
+
+                              </div>
+                              <button type="submit" class="btn btn-dark">Submit</button>
+                      
+                            </form>*/
