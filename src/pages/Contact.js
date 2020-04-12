@@ -1,29 +1,40 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useCallback } from 'react';
 import background from '../images/demo5.png';
 
 export default class Contact extends Component {
-  /*constructor(props) {
+  constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = { name: "", email: "", message: "", status:"" };
   }
+
+  encode = (data) => {
+    const formData = new FormData();
+    Object.keys(data).forEach((k)=>{
+      formData.append(k,data[k])
+    });
+    return formData
+  };
 
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        this.setState({status: 'Form Submission Successful!!'})
+        alert("Success!")
+      })
       .catch(error => alert(error));
 
     e.preventDefault();
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });*/
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
 
     render() {
-      const { name, email, message } = this.state;
+      const { name, email, message, status } = this.state;
         return (
             <div class="container-fluid">
             <div class="row">
@@ -39,25 +50,26 @@ export default class Contact extends Component {
                       <div class="col-md-9 col-lg-8 mx-auto">
                         <h3 class="login-heading mb-4">Have a question for us? Go for it</h3>
                      
-                            <form name="contact" method="post">
-                              <input type="hidden" name="form-name" value="contact" />
+                            <form onSubmit={this.handleSubmit} action="/thank-you/">
+                
                               <div class="form-group">
-                                  <label>Your Email: <input type="email" name="email"/></label>
+                                  <label>Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} /></label>
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
 
                               <div class="form-group">
-                                  <label>Your Name: <input type="text" name="name"/></label>
+                                  <label>Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} /></label>
                                  
                               </div> 
 
                               <div class="form-group">
-                                  <label>Message: <textarea name="message"></textarea></label>
+                                  <label>Message: <textarea name="message" value={message} onChange={this.handleChange} /></label>
 
                               </div>
                               <button type="submit" class="btn btn-dark">Submit</button>
                       
                             </form>
+                            <h3>{status}</h3>
 
                       </div>
                     </div>
