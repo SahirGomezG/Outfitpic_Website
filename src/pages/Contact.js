@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import background from '../images/demo5.png';
 
 const encode = (data) => {
-  /*const formData = new FormData();
+  const formData = new FormData();
   Object.keys(data).forEach((k)=>{
     formData.append(k,data[k])
   });
-  return formData*/
-  return Object.keys(data)
+  return formData
+  /*return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+      .join("&");*/
 };
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "", status:"" };
+    this.state = { name: "", email: "", message: "" };
   }
 
 
@@ -26,7 +26,7 @@ export default class Contact extends Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
-        this.setState({status: 'Form Submission Successful!!'});
+        //this.setState({status: 'Form Submission Successful!!'});
         alert("Success!")
       })
       .catch(error => alert(error));
@@ -40,7 +40,7 @@ export default class Contact extends Component {
 
 
     render() {
-      const { name, email, message, status } = this.state;
+      const { name, email, message } = this.state;
         return (
             <div class="container-fluid">
             <div class="row">
@@ -78,7 +78,7 @@ export default class Contact extends Component {
                               <button type="submit" class="btn btn-dark">Submit</button>
                       
                             </form>
-                            <h3>{status}</h3>
+                           
 
                       </div>
                     </div>
@@ -141,4 +141,5 @@ export default class Contact extends Component {
                               </div>
                               <button type="submit" class="btn btn-dark">Submit</button>
                       
-                            </form>*/
+                            </form>
+                             <h3>{status}</h3>*/
