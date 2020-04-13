@@ -86,13 +86,17 @@ export default function Terms() {
 
                         <p>  The license is valid until terminated by OutfitPic or by You. Your rights under this license will terminate automatically and without notice from OutiftiPic if You fail to adhere to any term(s) of this license. Upon License termination, You shall stop all use of the Application, and destroy all copies, full or partial, of the Application.</p>
 
-                        <p> 11. THIRD-PARTY TERMS OF AGREEMENTS AND BENEFICIARY   OutfitPic represents and warrants that OutfitPic will comply with applicable third-party terms of agreement when using licensed Application.   In Accordance with Section 9 of the &quot;Instructions for Minimum Terms of Developer's End-User License Agreement,&quot; Apple and Apple's subsidiaries shall be third-party beneficiaries of this End User License Agreement and - upon Your acceptance of the terms and conditions of this license agreement, Apple will have the right (and will be deemed to have accepted the right) to enforce this End User License Agreement against You as a third-party beneficiary thereof. </p>
+                        <p> 11. THIRD-PARTY TERMS OF AGREEMENTS AND BENEFICIARY </p> 
+                        
+                        <p> OutfitPic represents and warrants that OutfitPic will comply with applicable third-party terms of agreement when using licensed Application.   In Accordance with Section 9 of the &quot;Instructions for Minimum Terms of Developer's End-User License Agreement,&quot; Apple and Apple's subsidiaries shall be third-party beneficiaries of this End User License Agreement and - upon Your acceptance of the terms and conditions of this license agreement, Apple will have the right (and will be deemed to have accepted the right) to enforce this End User License Agreement against You as a third-party beneficiary thereof. </p>
 
                         <p>12. INTELLECTUAL PROPERTY RIGHTS </p>
 
                         <p>OutfitPic and the End-User acknowledge that, in the event of any third-party claim that the licensed Application or the End-User's possession and use of that licensed Application infringes on the third party's intellectual property rights, OutfitPic, and not Apple, will be solely responsible for the investigation, defense, settlement and discharge or any such intellectual property infringement claims. </p>
 
-                        <p>13. APPLICABLE LAW   This license agreement is governed by the laws of the State of New York excluding its conflicts of law rules. </p>
+                        <p>13. APPLICABLE LAW </p>
+
+                        <p> This license agreement is governed by the laws of the State of New York excluding its conflicts of law rules. </p>
 
                         <p>14. MISCELLANEOUS </p> 
                         

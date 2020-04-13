@@ -19,7 +19,7 @@ export default function Features() {
                     <div class="device-mockup iphone6_plus portrait white">
                       <div class="device">
                         <div class="screen">              
-                          <img src={demo} class="img-fluid" alt=""/>
+                          <img src={demo} class="img-fluid" alt="outfitpic demo6"/>
                         </div>
                       
                       </div>
