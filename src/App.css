@@ -189,6 +189,7 @@ header.masthead .device-container .screen img {
   }
   header.masthead .header-content {
     margin-bottom: 0;
+    /*margin-top: -50px;*/
     text-align: left;
   }
   header.masthead .header-content h1 {
@@ -199,16 +200,13 @@ header.masthead .device-container .screen img {
   }
 }
 
-@media (pointer: coarse) and (hover: none) {
+/*@media (pointer: coarse) and (hover: none) {
   header.masthead {
     background: url('images/demo3.png') #343a41 no-repeat center center scroll;
     background-size: 120%;
     background-position: 50% 100%;
   }
-  header.masthead video {
-    display: none;
-  }
-}
+}*/
 
 /* Section Download */
 
@@ -312,7 +310,10 @@ section.clip .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   section.clip {
-    background: url('images/background.jpg') black no-repeat center center scroll;
+    /*background: url('images/background.jpg') black no-repeat center center scroll;*/
+    background: url('images/demo3.png') #343a41 no-repeat center center scroll;
+    background-size: 140%;
+    background-position: 50% 80%;
   }
   section.clip video {
     display: none;

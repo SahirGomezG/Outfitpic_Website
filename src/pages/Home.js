@@ -59,7 +59,7 @@ export default function Home() {
                 <source src={clip} type="video/mp4"/>
             </video>
             <div class="container h-100">
-              <div class="d-flex h-100 text-center align-items-center">
+              <div class="d-flex h-50 text-center align-items-center">
                 <div class="w-100 text-white">
                       <h2>Join today!</h2>
                       <p class="lead mb-0">Help others choose their best outfit.</p>
