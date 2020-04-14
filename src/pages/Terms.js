@@ -78,7 +78,9 @@ export default function Terms() {
                         
                         <p>  OutfitPic and the End-User acknowledge that OutfitPic, and not Apple, is responsible for addressing any claims of the End-User or any third party relating to the licensed Application or the End-User&rsquo;s possession and/or use of that licensed Application, including, but not limited to:   (i) product liability claims;   (ii) any claim that the licensed Application fails to conform to any applicable legal or regulatory requirement; and   (iii) claims arising under consumer protection, privacy, or similar legislation, including in connection with Your Licensed Application&rsquo;s use of the HealthKit and HomeKit.</p>
 
-                        <p>  8. LEGAL COMPLIANCE   You represent and warrant that You are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a &quot;terrorist supporting&quot; country; and that You are not listed on any U.S. Government list of prohibited or restricted parties.</p>
+                        <p>  8. LEGAL COMPLIANCE </p>
+
+                        <p>You represent and warrant that You are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a &quot;terrorist supporting&quot; country; and that You are not listed on any U.S. Government list of prohibited or restricted parties.</p>
 
                         <p>  9. CONTACT INFORMATION    For general inquiries, complaints, questions or claims concerning the licensed Application, please contact:  support@limekee.com</p>
 
@@ -100,7 +102,7 @@ export default function Terms() {
 
                         <p>14. MISCELLANEOUS </p> 
                         
-                        <p>  14.1 If any of the terms of this agreement should be or become invalid, the validity of the remaining provisions shall not be affected. Invalid terms will be replaced by valid ones formulated in a way that will achieve the primary purpose.   14.2 Collateral agreements, changes and amendments are only valid if laid down in writing. The preceding clause can only be waived in writing.   These terms of use were created using Termly&rsquo;s Terms and Conditions Generator.</p>                                         
+                        <p> 14.1 If any of the terms of this agreement should be or become invalid, the validity of the remaining provisions shall not be affected. Invalid terms will be replaced by valid ones formulated in a way that will achieve the primary purpose.   14.2 Collateral agreements, changes and amendments are only valid if laid down in writing. The preceding clause can only be waived in writing.   These terms of use were created using Termly&rsquo;s Terms and Conditions Generator.</p>                                         
 
                     </div>
                   </div>
