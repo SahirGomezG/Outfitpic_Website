@@ -44,7 +44,7 @@ export default function Home() {
             <div class="row">
               <div class="col-md-8 mx-auto">
                 <h2>Discover the fuzz!</h2>
-                <p>Our app is available on any iOS device! Download now to get started!</p>
+                <p>Our app is available on any iOS mobile device! Download now to get started!</p>
                 <div class="badges">
                   <a class="badge-link" href="https://apps.apple.com/us/app/outfitpic-app/id1507851093?ls=1"><img src={appStoreBadge} alt="App store logo"/></a>
                 </div>
@@ -79,23 +79,3 @@ export default function Home() {
         </>
     )
 }
-
-
-/*<header class="masthead">
-          <div class="overlay"></div>
-          <img class="img-fluid" src={demo}  alt="iPhone 11 sample"/>
-          
-          <div class="container h-100">
-            <div class="row h-100">
-              <div class="col-lg-5 my-auto">
-                <div class="header-content text-center mx-auto">
-                  <h2 class="section-heading"> Be the best dressed!</h2>
-                  <a href="#download" class="btn btn-outline-light btn-xl">Start Now for Free!</a>
-                </div>
-              </div>
-              <div class="col-lg-7 my-auto">   
-                           
-              </div>
-            </div>
-          </div>
-        </header>*/
