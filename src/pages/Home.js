@@ -46,7 +46,7 @@ export default function Home() {
                 <h2>Discover the fuzz!</h2>
                 <p>Our app is available on any iOS device! Download now to get started!</p>
                 <div class="badges">
-                  <a class="badge-link" href="#"><img src={appStoreBadge} alt="App store logo"/></a>
+                  <a class="badge-link" href="https://apps.apple.com/us/app/outfitpic-app/id1507851093?ls=1"><img src={appStoreBadge} alt="App store logo"/></a>
                 </div>
               </div>
             </div>
