@@ -7,5 +7,8 @@
         "paths": ["*"]
       }
     ]
-  }
+  },
+  "webcredentials": {
+      "apps": [ "W66W6Y75YL.sahir.outfitpic" ]
+   }
 }
